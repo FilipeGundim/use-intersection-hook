@@ -1,5 +1,11 @@
 # use-intersection-hook
 
+This is a simple React Hooks that trigger a callback all time de element is viewed.  
+
+# Installation
+
+Just run a ```yarn add use-intersection-hook``` or ```npm i --save use-intersection-hook```
+
 # How to use
 
 Simply import `use-intersection-hook` on your component, then call this on that way:
@@ -28,7 +34,7 @@ export const Example = () => {
 };
 ```
 
-every time the component was viewed by the client, a callback will be triggered
+Every time the component was viewed by the client, a callback will be triggered
 
 ## TODO:
 
