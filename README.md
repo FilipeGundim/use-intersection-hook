@@ -5,12 +5,13 @@
 Simply import `use-intersection-hook` on your component, then call this on that way:
 
 ```jsx
-import useIntersectionObserver from "use-intersection-observer";
+import { useEffect } from "react";
+import { useIntersectionObserver } from "use-intersection-observer";
 
-const Example = () => {
+export const Example = () => {
   const { createObserverRef, disconnectObserver } = useIntersectionObserver();
 
-  React.useEffect(() => {
+  useEffect(() => {
     () => disconnectObserver();
   }, []);
 
