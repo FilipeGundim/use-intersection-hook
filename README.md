@@ -1,11 +1,11 @@
-# use-intersection-observer-hook
+# use-intersection-hook
 
 # How to use
 
-Simply import `use-intersection-observer-hook` on your component, then call this on that way:
+Simply import `use-intersection-hook` on your component, then call this on that way:
 
 ```jsx
-import useIntersectionObserver from "./use-intersection-observer-hook";
+import useIntersectionObserver from "./use-intersection-hook";
 
 const Example = () => {
   const observerCallback = () => console.log("Hello world was viewed");
