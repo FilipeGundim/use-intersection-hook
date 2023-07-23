@@ -1,13 +1,13 @@
-import React from "react";
+import { useRef, useCallback } from "react";
 
-const useIntersectionObserver = (callback) => {
-  const observerRef = React.useRef();
+export const useIntersectionObserver = (callback) => {
+  const observerRef = useRef();
 
   const observeNode = (node) => observerRef.current?.observe(node);
 
   const disconnectObserver = () => observerRef.current?.disconnect();
 
-  const handleRef = React.useCallback((node) => {
+  const handleRef = useCallback((node) => {
     if (!node) {
       return;
     }
@@ -24,4 +24,4 @@ const useIntersectionObserver = (callback) => {
   return { createObserverRef, disconnectObserver };
 };
 
-export default useIntersectionObserver;
+
