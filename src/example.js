@@ -5,7 +5,8 @@ export const Example = () => {
   const { createObserverRef, disconnectObserver } = useIntersectionObserver();
 
   useEffect(() => {
-    () => disconnectObserver();
+    // ... stuff
+    return () => disconnectObserver();
   }, []);
 
   const observerCallback = () => console.log("Hello world was viewed");
