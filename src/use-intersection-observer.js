@@ -1,6 +1,6 @@
 import { useRef, useCallback } from "react";
 
-export const useIntersectionObserver = (callback) => {
+export const useIntersectionObserver = () => {
   const observerRef = useRef();
 
   const observeNode = (node) => observerRef.current?.observe(node);
@@ -14,8 +14,8 @@ export const useIntersectionObserver = (callback) => {
     observeNode(node);
   }, []);
 
-  const createObserverRef = () => {
-    const observer = new IntersectionObserver(callback);
+  const createObserverRef = (callback, options) => {
+    const observer = new IntersectionObserver(callback, options);
     observerRef.current = observer;
 
     return handleRef;
