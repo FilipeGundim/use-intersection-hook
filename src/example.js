@@ -1,13 +1,12 @@
-import React from "react";
-import useIntersectionObserver from "./use-intersection-observer";
+import { useEffect } from "react";
+import { useIntersectionObserver } from "./use-intersection-observer";
 
-const Example = () => {
+export const Example = () => {
   const observerCallback = () => console.log("Hello world was viewed");
 
-  const { createObserverRef, disconnectObserver } =
-    useIntersectionObserver(observerCallback);
+  const { createObserverRef, disconnectObserver } = useIntersectionObserver(observerCallback);
 
-  React.useEffect(() => {
+  useEffect(() => {
     () => disconnectObserver();
   }, []);
 
@@ -18,4 +17,3 @@ const Example = () => {
   );
 };
 
-export default Example;
