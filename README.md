@@ -1,1 +1,36 @@
-# use-observer-hook
+# use-intersection-observer-hook
+
+# How to use
+
+Simply import `use-intersection-observer-hook` on your component, then call this on that way:
+
+```jsx
+import useIntersectionObserver from "./use-intersection-observer-hook";
+
+const Example = () => {
+  const observerCallback = () => console.log("Hello world was viewed");
+
+  const { createObserverRef, disconnectObserver } =
+    useIntersectionObserver(observerCallback);
+
+  React.useEffect(() => {
+    () => disconnectObserver();
+  }, []);
+
+  return (
+    <section ref={createObserverRef()}>
+      <span>Hello world!</span>
+    </section>
+  );
+};
+```
+
+every time the component was viewed by the client, a callback will be triggered
+
+## TODO:
+
+- [ ] Port to TS
+- [ ] Apply some cool CSS to `example`
+- [ ] Write TESTS!
+- [ ] Deploy example to GH pages!
+- [ ] Configure Github Actions
