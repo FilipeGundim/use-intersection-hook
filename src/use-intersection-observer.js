@@ -15,13 +15,10 @@ export const useIntersectionObserver = () => {
   }, []);
 
   const createObserverRef = (callback, options) => {
-    const observer = new IntersectionObserver(callback, options);
-    observerRef.current = observer;
+    observerRef.current = new IntersectionObserver(callback, options);
 
     return handleRef;
   };
 
   return { createObserverRef, disconnectObserver };
 };
-
-
