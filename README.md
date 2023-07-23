@@ -1,6 +1,6 @@
 # use-intersection-hook
 
-This is a simple React Hooks that trigger a callback all time de element is viewed.  
+This is a simple React Hooks that trigger a callback all time the element is viewed.  
 
 # Installation
 
