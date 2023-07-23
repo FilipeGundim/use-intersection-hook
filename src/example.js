@@ -2,17 +2,16 @@ import React from "react";
 import useIntersectionObserver from "./use-intersection-observer";
 
 const Example = () => {
-  const observerCallback = () => console.log("Hello world was viewed");
-
-  const { createObserverRef, disconnectObserver } =
-    useIntersectionObserver(observerCallback);
+  const { createObserverRef, disconnectObserver } = useIntersectionObserver();
 
   React.useEffect(() => {
     () => disconnectObserver();
   }, []);
 
+  const observerCallback = () => console.log("Hello world was viewed");
+
   return (
-    <section ref={createObserverRef()}>
+    <section ref={createObserverRef(observerCallback)}>
       <span>Hello world!</span>
     </section>
   );
