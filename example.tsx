@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useIntersectionObserver } from "./use-intersection-observer";
+import React, { useEffect } from "react";
+import { useIntersectionObserver } from "./src/use-intersection-observer";
 
 export const Example = () => {
   const { createObserverRef, disconnectObserver } = useIntersectionObserver();
@@ -20,4 +20,3 @@ export const Example = () => {
     </section>
   );
 };
-
