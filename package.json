@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "description": "",
   "type": "module",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts ."
