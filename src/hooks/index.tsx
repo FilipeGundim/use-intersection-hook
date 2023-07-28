@@ -1,6 +1,6 @@
 import { useRef, useCallback } from "react";
 
-export const useIntersectionObserver = () => {
+const useIntersectionObserver = () => {
   const observerRef = useRef<IntersectionObserver>();
 
   const observeNode = (element: HTMLElement) =>
@@ -26,3 +26,5 @@ export const useIntersectionObserver = () => {
 
   return { createObserverRef, disconnectObserver };
 };
+
+export default useIntersectionObserver;

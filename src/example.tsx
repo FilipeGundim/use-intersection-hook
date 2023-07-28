@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useIntersectionObserver } from "./src/use-intersection-observer";
+import useIntersectionObserver from "./hooks";
 
 export const Example = () => {
   const { createObserverRef, disconnectObserver } = useIntersectionObserver();
