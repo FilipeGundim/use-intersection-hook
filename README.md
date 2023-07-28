@@ -40,6 +40,5 @@ Every time the component was viewed by the client, a callback will be triggered
 ## TODO:
 
 - [ ] Apply some cool CSS to `example`
-- [ ] Write TESTS!
 - [ ] Deploy example to GH pages!
 - [ ] Configure Github Actions
