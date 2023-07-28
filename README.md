@@ -11,7 +11,7 @@ Just run a ```yarn add use-intersection-hook``` or ```npm i --save use-intersect
 Simply import `use-intersection-hook` on your component, then call this on that way:
 
 ```jsx
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useIntersectionObserver } from "use-intersection-hook";
 
 export const Example = () => {
