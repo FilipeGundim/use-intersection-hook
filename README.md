@@ -42,3 +42,4 @@ Every time the component was viewed by the client, a callback will be triggered
 - [ ] Apply some cool CSS to `example`
 - [ ] Deploy example to GH pages!
 - [ ] Configure Github Actions
+- [ ] compatibility with commonJs
