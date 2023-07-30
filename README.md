@@ -12,7 +12,7 @@ Simply import `use-intersection-hook` on your component, then call this on that 
 
 ```jsx
 import React, { useEffect } from "react";
-import useIntersectionObserver from "use-intersection-hook";
+import { useIntersectionObserver } from "use-intersection-hook";
 
 export const Example = () => {
   const { createObserverRef, disconnectObserver } = useIntersectionObserver();
@@ -42,4 +42,3 @@ Every time the component was viewed by the client, a callback will be triggered
 - [ ] Apply some cool CSS to `example`
 - [ ] Deploy example to GH pages!
 - [ ] Configure Github Actions
-- [ ] Compatibility with commonJs
