@@ -1,6 +1,6 @@
 {
   "name": "use-intersection-hook",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
