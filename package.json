@@ -4,6 +4,9 @@
   "description": "",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig-lib.json && tsc -p tsconfig-cjs.json",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
