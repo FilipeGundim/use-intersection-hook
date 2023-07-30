@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
+    "target": "ES2015",
+    "module": "ES2020",
     "moduleResolution": "Node16",
     "jsx": "react",
     "declaration": true,
@@ -15,7 +15,7 @@
     "noImplicitReturns": true,
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": true,
-    "outDir": "lib",
+    "outDir": "lib/mjs",
     "lib": ["es2018", "dom"],
     "importHelpers": true
   },
