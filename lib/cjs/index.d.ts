@@ -1,4 +1,4 @@
 export declare const useIntersectionObserver: () => {
-    createObserverRef: (callback: IntersectionObserverCallback, options?: IntersectionObserverInit) => (element: HTMLElement | null) => void;
-    disconnectObserver: () => void | undefined;
+    observe: (callback: IntersectionObserverCallback, options?: IntersectionObserverInit) => (element: HTMLElement | null) => void;
+    disconnect: () => void;
 };
