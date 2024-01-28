@@ -1,21 +1,20 @@
 import { useRef, useCallback } from "react";
 
 export const useIntersectionObserver = () => {
-  const observerRef = useRef<IntersectionObserver>();
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  const observeNode = (element: HTMLElement) =>
-    observerRef.current?.observe(element);
+  const observeNode = (e: HTMLElement) => observerRef.current!.observe(e);
 
-  const disconnectObserver = () => observerRef.current?.disconnect();
+  const disconnect = () => observerRef.current!.disconnect();
 
   const handleRef = useCallback((element: HTMLElement | null) => {
     if (!element) {
-      return;
+      throw new Error("❌ The element is invalid");
     }
     observeNode(element);
   }, []);
 
-  const createObserverRef = (
+  const observe = (
     callback: IntersectionObserverCallback,
     options?: IntersectionObserverInit
   ) => {
@@ -24,5 +23,5 @@ export const useIntersectionObserver = () => {
     return handleRef;
   };
 
-  return { createObserverRef, disconnectObserver };
+  return { observe, disconnect };
 };
