@@ -15,11 +15,11 @@ import React, { useEffect } from "react";
 import { useIntersectionObserver } from "use-intersection-hook";
 
 export const Example = () => {
-  const { createObserverRef, disconnectObserver } = useIntersectionObserver();
+  const { observe, disconnect } = useIntersectionObserver();
 
   useEffect(() => {
     // ... stuff
-    return () => disconnectObserver();
+    return () => disconnect();
   }, []);
 
   const observerCallback = () => console.log("Hello world was viewed");
@@ -28,7 +28,7 @@ export const Example = () => {
   };
 
   return (
-    <section ref={createObserverRef(observerCallback, observerOptions)}>
+    <section ref={observe(observerCallback, observerOptions)}>
       <span>Hello world!</span>
     </section>
   );
